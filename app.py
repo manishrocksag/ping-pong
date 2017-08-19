@@ -5,6 +5,7 @@
 
 from src.web_command_handler import WebApiHandler
 from src.operations import start
+from utils import create_response
 import settings
 
 
@@ -19,9 +20,9 @@ class App(WebApiHandler):
         """
         super(App, self).__init__(listening_ip, listening_port, 'index.html')
 
-     def api_starttournament(self, args):
-         start()
-
+    def api_starttournament(self, args):
+         output = create_response(start())
+         return output
 
 def main():
         app = App(10007, '0.0.0.0')
