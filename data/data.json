@@ -1,0 +1,42 @@
+[
+  {
+    "no": 1,
+    "name": "Joey",
+    "defence_set_length": 8
+  },
+  {
+    "no": 2,
+    "name": "Nick",
+    "defence_set_length": 8
+  },
+  {
+    "no": 3,
+    "name": "Russel",
+    "defence_set_length": 7
+  },
+  {
+    "no": 4,
+    "name": "Vivek",
+    "defence_set_length": 7
+  },
+  {
+    "no": 5,
+    "name": "Pritam",
+    "defence_set_length": 6
+  },
+  {
+    "no": 6,
+    "name": "Amit",
+    "defence_set_length": 6
+  },
+  {
+    "no": 7,
+    "name": "Chandler",
+    "defence_set_length": 5
+  },
+  {
+    "no": 8,
+    "name": "Colwin",
+    "defence_set_length": 5
+  }
+]
