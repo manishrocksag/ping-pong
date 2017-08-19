@@ -4,6 +4,7 @@
 import os
 
 DATA_FILE = os.path.join("data", "data.json")
+REPORT_FILE = os.path.join("data", "report.json")
 
 OFFENSIVE = 0
 DEFENSIVE = 1

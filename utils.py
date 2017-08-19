@@ -53,5 +53,10 @@ def load_data():
 
 
 def write_data(data):
-    with open(settings.DATA_FILE, 'w') as _file:
-            _file.write(json.dumps(data))
+    with open(settings.REPORT_FILE, 'r') as _file:
+        loaded_data = json.loads(_file.read())
+    _id = len(loaded_data) + 1
+    data["tournamnet"] = _id
+    loaded_data.append(data)
+    with open(settings.REPORT_FILE, 'w') as _file:
+            _file.write(json.dumps(loaded_data, indent=4))

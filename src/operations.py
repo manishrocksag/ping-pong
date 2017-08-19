@@ -11,7 +11,6 @@ def load_players():
     """
     players = []
     data = load_data()
-
     for item in data:
         players.append(Player(item["no"], item["name"], item["defence_set_length"]))
     return players
@@ -23,4 +22,4 @@ def start():
     """
     players = load_players()
     referee = Referee(players)
-    referee.start_tournament()
+    return referee.start_tournament()
