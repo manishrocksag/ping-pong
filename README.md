@@ -14,24 +14,24 @@ To hit any api from the local system after starting the system:
 *localhost:10007/api_routes*
 
 **List of APIs available**
-*/api/getplayers*
+1. /api/getplayers
 Gets the list of players available for the game.
-*/api?getplayers?id=1*
+2. /api?getplayers?id=1
 Gets the player details for the particular player id.
-*/api/starttournament*
+3. /api/starttournament*
 Start the tournament among the player orchestrated by the referee and returns
 the results of the game.
-*/api/report*
+4. /api/report
 Generates the report for all the tournament held.
 
 
 # todo
-/api/addplayer
-/api/dropplayer
-/api/configuregame
-/api/addreferee
+1. /api/addplayer
+2. /api/dropplayer
+3. /api/configuregame
+4. /api/addreferee
 
-Make all the games run concurrently using multithreading.
-Persist the scores of the players.
-Write test cases.
-Implement authentication.
+5. Make all the games run concurrently using multithreading.
+6. Persist the scores of the players.
+7. Write test cases.
+8. Implement authentication.
