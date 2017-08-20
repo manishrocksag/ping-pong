@@ -24,8 +24,8 @@ class Referee(object):
             game.start_game()
             winner = game.get_winner()
             winners.append(winner)
-            report_data.append({"players": [players[index].name, players[index+1].name], "winner": winner.name, "datetime": str(time.time())})
-        
+            report_data.append({"players": [players[index].name, players[index+1].name], "winner": winner.name, "datetime": str(time.strftime("%c"))})
+
         return winners, report_data
 
     def start_tournament(self):

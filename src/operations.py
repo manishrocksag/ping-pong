@@ -15,6 +15,18 @@ def load_players():
         players.append(Player(item["no"], item["name"], item["defence_set_length"]))
     return players
 
+def get_players_info(id=None):
+    player_info = []
+    players = load_players()
+    if not id:
+        for item in players:
+            player_info.append(str(item))
+    else:
+        for item in players:
+            if item._id == id:
+                player_info.append(str(item))
+    return player_info
+
 def start():
     """
     Creates a list of players objects. Creates a referee object.

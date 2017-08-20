@@ -39,3 +39,6 @@ class Player(object):
 
     def is_offensive(self):
         return self.current_role == settings.OFFENSIVE
+
+    def __str__(self):
+        return str({"id": self._id, "name": self.name})

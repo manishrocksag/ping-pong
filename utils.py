@@ -51,6 +51,9 @@ def load_data():
     with open(settings.DATA_FILE, 'r') as _file:
         return json.loads(_file.read())
 
+def load_report_data():
+    with open(settings.REPORT_FILE, 'r') as _file:
+        return json.loads(_file.read())
 
 def write_data(data):
     with open(settings.REPORT_FILE, 'r') as _file:
