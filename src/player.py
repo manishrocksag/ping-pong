@@ -11,6 +11,8 @@ class Player(object):
         self.defence_array = [0 for _ in range(self.len_defence_array)]
         self.score = 0
         self.current_role = None
+        self.is_playing = False
+        self.is_winner = False
 
     def shut_down(self):
         """
@@ -26,6 +28,8 @@ class Player(object):
         """
         self.defence_array = [0 for _ in range(self.len_defence_array)]
         self.score = 0
+        self.is_playing = False
+        self.is_winner = False
 
     def pick_a_number(self, start_range, end_range):
         return randint(start_range, end_range)

@@ -4,6 +4,7 @@ from utils import load_data
 import settings
 import json
 
+
 def load_players():
     """
     Takes a data file with the set of attributes for the players from
@@ -14,6 +15,7 @@ def load_players():
     for item in data:
         players.append(Player(item["no"], item["name"], item["defence_set_length"]))
     return players
+
 
 def get_players_info(id=None):
     player_info = []
@@ -26,6 +28,7 @@ def get_players_info(id=None):
             if item._id == id:
                 player_info.append(str(item))
     return player_info
+
 
 def start():
     """

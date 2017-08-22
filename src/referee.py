@@ -1,7 +1,8 @@
 from src.game import Game
 import time
-from utils import write_data
+from utils import write_report_data
 import settings
+
 
 class Referee(object):
     """
@@ -30,7 +31,7 @@ class Referee(object):
 
     def start_tournament(self):
         """
-        Coducts the playoffs between the players. Every winner moves up
+        Conducts the playoffs between the players. Every winner moves up
         in the tournament till there is a single winner left in the chain.
         """
         _winners = self.players
@@ -43,9 +44,10 @@ class Referee(object):
             for item in _winners:
                 # set the score and defence array of the winner to 0 for the next game.
                 item.re_initialize()
+
         persist_data["results"] = data
         for index, item in enumerate(persist_data["results"]):
             for ind, result in enumerate(item):
                 result["game"] = str(index) + "_" + str(ind)
-        write_data(persist_data)
+        write_report_data(persist_data)
         return persist_data

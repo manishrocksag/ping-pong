@@ -51,11 +51,18 @@ def load_data():
     with open(settings.DATA_FILE, 'r') as _file:
         return json.loads(_file.read())
 
+
+def write_data(data):
+    with open(settings.DATA_FILE, 'w') as _file:
+            _file.write(json.dumps(data))
+
+
 def load_report_data():
     with open(settings.REPORT_FILE, 'r') as _file:
         return json.loads(_file.read())
 
-def write_data(data):
+
+def write_report_data(data):
     with open(settings.REPORT_FILE, 'r') as _file:
         loaded_data = json.loads(_file.read())
     _id = len(loaded_data) + 1

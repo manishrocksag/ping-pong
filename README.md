@@ -35,3 +35,8 @@ Generates the report for all the tournament held.
 6. Persist the scores of the players.
 7. Write test cases.
 8. Implement authentication.
+
+http://localhost:10007/api/createnewtournament
+http://localhost:10007/api/registerplayers
+http://localhost:10007/api/registerreferee
+
