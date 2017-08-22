@@ -119,7 +119,6 @@ class WebApiHandler(object):
             else:
                 func = self.get_api_func(api)
                 response = func(args)
-                response = create_response(response)
 
             cherrypy.response.headers['Access-Control-Allow-Origin'] = "*"
 

@@ -13,7 +13,7 @@ The server runs on the default port of 1007.
 To hit any api from the local system after starting the system:
 *localhost:10007/api_routes*
 
-**List of APIs available**
+**List of General APIs available**
 1. /api/getplayers
 Gets the list of players available for the game.
 2. /api?getplayers?id=1
@@ -24,19 +24,30 @@ the results of the game.
 4. /api/report
 Generates the report for all the tournament held.
 
+**To play a game by user**
+1. /api/createnewtournament
+2. /api/registerplayers
+3. /api/registerreferee
+4. /api/getplayers
+5. /api/startmatch?player1=Joey&player2=Nick
+6. /api/winnerslist
+7. /api/getremainingplayers
+8. /api/currentwinner
 
-# todo
-1. /api/addplayer
-2. /api/dropplayer
-3. /api/configuregame
-4. /api/addreferee
+*The start match has to be called multiple times among
+players and also between winners*
 
-5. Make all the games run concurrently using multithreading.
-6. Persist the scores of the players.
-7. Write test cases.
-8. Implement authentication.
+**MISC**
+1. /api/addplayer?no=1&name=Jack&defence_set_length=6
 
-http://localhost:10007/api/createnewtournament
-http://localhost:10007/api/registerplayers
-http://localhost:10007/api/registerreferee
+**TODO**
+1. /api/dropplayer
+2. /api/configuregame
+3. Make all the games run concurrently using multithreading.
+4. Persist the scores of the players.
+5. Write test cases.
+6. Implement authentication.
+
+
+
 

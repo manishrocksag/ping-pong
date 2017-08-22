@@ -10,6 +10,7 @@ class Game(object):
         self.start_range = start_range
         self.end_range = end_range
         self.winner = None
+        self.loser = None
 
     def start_game(self):
         self.player1.current_role = settings.OFFENSIVE
@@ -24,11 +25,15 @@ class Game(object):
 
         if self.player1.score == self.total_points:
             self.winner = self.player1
+            self.loser = self.player2
+
         elif self.player2.score == self.total_points:
             self.winner = self.player2
+            self.loser = self.player1
 
         print  self.player1.name, "scored: ", self.player1.score, self.player2.name, "scored: ", self.player2.score,
         print "Winner of the match is: ", self.winner.name, " with score of: ", self.winner.score
+        return self.winner, self.loser, self.winner.score, self.loser.score
 
     def get_winner(self):
         return self.winner
