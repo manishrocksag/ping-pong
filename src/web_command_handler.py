@@ -74,7 +74,7 @@ class WebApiHandler(object):
             cherrypy.tools.cors = cherrypy.Tool('before_handler', self.CORS)
 
             cherrypy.config.update({'server.socket_host': self.listening_ip,
-                                    'server.socket_port': self.listening_port,
+                                    'server.socket_port': int(os.environ.get('PORT', '5000')),
                                     'engine.autoreload_on': False,
                                     'log.screen': True,
                                     'log.access_file': os.path.join(self.logs_path, 'server_access_logs'),
