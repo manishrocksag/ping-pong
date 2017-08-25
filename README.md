@@ -9,9 +9,12 @@ To install the dependencies:
 To start the application:
 '''python app.py'''
 
-The server runs on the default port of 1007.
+The server runs on the default port of 5000.
 To hit any api from the local system after starting the system:
-*localhost:10007/api_routes*
+*localhost:5000/api_routes*
+
+*The app is hosted in HEROKU. It can also be accessed
+through **https://ping-pong-ping.herokuapp.com***
 
 **List of General APIs available**
 1. /api/getplayers
