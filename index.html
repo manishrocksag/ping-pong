@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong</title>
+</head>
+<body>
+<p><strong>PING PONG CHAMPIONSHIP</strong></p>
+
+<p><em>Dependencies</em></p>
+
+<ul>
+<li>cherrypy</li>
+</ul>
+
+<p>To install the dependencies:
+'''pip install -r requirements.txt'''</p>
+
+<p>To start the application:
+'''python app.py'''</p>
+
+<p>The server runs on the default port of 5000.
+To hit any api from the local system after starting the system:
+<em>localhost:5000/api_routes</em></p>
+
+<p><em>The app is hosted in HEROKU. It can also be accessed
+through <strong>https://ping-pong-ping.herokuapp.com</em></strong></p>
+
+<p><strong>List of General APIs available</strong></p>
+
+<ol>
+<li>/api/getplayers
+Gets the list of players available for the game.</li>
+
+<li>/api?getplayers?id=1
+Gets the player details for the particular player id.</li>
+
+<li>/api/starttournament
+Start the tournament among the player orchestrated by the referee and returns
+the results of the game.</li>
+
+<li>/api/report
+Generates the report for all the tournament held.</li>
+</ol>
+
+<p><strong>To play a game by user</strong></p>
+
+<ol>
+<li>/api/createnewtournament</li>
+
+<li>/api/registerplayers</li>
+
+<li>/api/registerreferee</li>
+
+<li>/api/getplayers</li>
+
+<li>/api/startmatch?player1=Joey&amp;player2=Nick</li>
+
+<li>/api/winnerslist</li>
+
+<li>/api/getremainingplayers</li>
+
+<li>/api/currentwinner</li>
+</ol>
+
+<p><em>The start match has to be called multiple times among
+players and also between winners</em></p>
+
+<p><strong>MISC</strong></p>
+
+<ol>
+<li>/api/addplayer?no=1&amp;name=Jack&amp;defence<em>set</em>length=6</li>
+</ol>
+
+<p><strong>TODO</strong></p>
+
+<ol>
+<li>/api/dropplayer</li>
+
+<li>/api/configuregame</li>
+
+<li>Make all the games run concurrently using multithreading.</li>
+
+<li>Persist the scores of the players.</li>
+
+<li>Write test cases.</li>
+
+<li>Implement authentication.</li>
+</ol>
+</body>
+</html>
